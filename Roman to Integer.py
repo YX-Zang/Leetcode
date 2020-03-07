@@ -17,8 +17,8 @@ class Solution(object):
         list1 = [dic[string] for string in s]
 
         for index in range(len(list1)):
-            if index+1 != len(list1):
-                flag = 1 if list1[index] >= list1[index+1] else -1
+            if index + 1 != len(list1):
+                flag = 1 if list1[index] >= list1[index + 1] else -1
                 list1[index] = flag * list1[index]
 
         for i in list1:

@@ -6,7 +6,7 @@ class Solution(object):
         """
         string = ''
         while n:
-            string = chr(int((n - 1) % 26) + 65) + string
+            string = chr(int((n - 1) % 26) + ord('A')) + string
             n = (n - 1) // 26
         return string
 

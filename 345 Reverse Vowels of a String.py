@@ -10,6 +10,6 @@ class Solution(object):
                 ls1.append(index)
         ls1_rev = ls1[::-1]
         s2 = list(s)
-        for i in range(len(ls1_rev)):
+        for i in range(len(ls1)):
             s2[ls1_rev[i]] = s[ls1[i]]
         return ''.join(s2)

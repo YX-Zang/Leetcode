@@ -7,11 +7,37 @@ class Solution(object):
         """
         print(s)
         print(numRows)
+        ls1 = []
         for j in range(len(s)//numRows):
             for i in range(numRows):
-                print(2*(numRows-1)*j+i, 2*(numRows-1)*j+2*(numRows-1)-i)
-
-
+                base = 2*(numRows-1)*j
+                if (base+i) >= len(s):
+                    # print('1~~~~~',base + i, base + 2 * (numRows - 1) - i)
+                    break
+                elif (base + 2 * (numRows - 1) - i) >= len(s):
+                    # print('2~~~~~',base + i, base + 2 * (numRows - 1) - i)
+                    # print('2~~~~~',base + i)
+                    # ls1.append((i, (base+i)))
+                    ls1.append((base+i))
+                else:
+                    # print(base + i, base + 2 * (numRows - 1) - i)
+                    # if base + i == base + 2 * (numRows - 1) - i:
+                    #     ls1.append((i,(base + i)))
+                    # else:
+                    # ls1.append((i, (base + i, base + 2 * (numRows - 1) - i)))
+                    ls1.append((base + i, base + 2 * (numRows - 1) - i))
+                    # ls1.append((base + i))
+                    # if (base+i) not in ls1:
+                    #     ls1.append((base+i))
+                    # if (base+2*(numRows - 1)-i) not in ls1:
+                    #     ls1.append(base+2*(numRows - 1)-i)
+        print(ls1)
+        ls2 = []
+        for i in range(numRows):
+            print(ls1[i::numRows])
+            # ls2.extend([s[x] for x in ls1[i::numRows]])
+        print(ls2)
+        # return ''.join(ls2)
 
 
 if __name__ == '__main__':

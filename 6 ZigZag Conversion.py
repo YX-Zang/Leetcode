@@ -7,7 +7,7 @@ class Solution(object):
         """
         if len(s) == 0:
             return ''
-        elif numRows==1:
+        elif numRows == 1:
             return s
         else:
             ls1 = []

@@ -7,4 +7,4 @@ class Solution(object):
         """
         s = ''.join(str(i) for i in b)
         s1 = int(s)
-        return pow(a , s1 , 1337)
+        return pow(a, s1, 1337)

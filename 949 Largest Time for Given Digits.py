@@ -11,4 +11,6 @@ class Solution(object):
             minute = i[2]*10 + i[3]
             if hour < 24 and minute < 60:
                 ls1.append((hour, minute))
+            else:
+                continue
         return '%02d:%02d' % (max(ls1)[0], max(ls1)[1]) if ls1 else ''

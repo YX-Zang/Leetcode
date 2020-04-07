@@ -7,5 +7,5 @@ class Solution(object):
         length = len(matrix[0])
         ls0 = []
         for i in matrix:
-            ls0 +=i
+            ls0 += i
         matrix[:] = [ls0[i::length][::-1] for i in range(length)]

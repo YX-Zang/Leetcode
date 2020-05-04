@@ -9,7 +9,6 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        s = ''
         if not head:
             return True
         ls1 = []
